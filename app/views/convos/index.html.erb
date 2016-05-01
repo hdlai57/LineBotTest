@@ -1,0 +1,8 @@
+<h1>Test Convo Homepage</h1>
+<hr>
+<li><%= link_to "New Convo", new_convo_path %></li>
+<hr>
+<% @convos.each do |convo| %>
+	<p><%= simple_format(convo.text)%></p><br>
+	<hr>
+<% end %>

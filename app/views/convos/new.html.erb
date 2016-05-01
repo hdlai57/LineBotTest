@@ -1,0 +1,8 @@
+<%= form_for @convo do |f| %>
+	<%= f.label :text %>
+	<br>
+	<%= f.text_area :text, size: "80x15" %>
+	<br>
+	<%= f.submit(@convo.new_record? ? "Create Post" : "Update Post") %>
+	<%= link_to "Cancel", :back %>
+<% end %>
