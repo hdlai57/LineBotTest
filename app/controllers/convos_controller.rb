@@ -1,6 +1,6 @@
 class ConvosController < ApplicationController
   before_action :client
-  
+
   def index
     @convos = Convo.all
   end
@@ -32,7 +32,7 @@ class ConvosController < ApplicationController
       when Line::Bot::Message::Text
         client.send_text(
           to_mid: message.from_mid,
-          text: message.content[:text],
+          text: message.content[:text] + "by Pu <3",
         )
       end
     }
