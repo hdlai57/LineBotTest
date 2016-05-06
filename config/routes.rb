@@ -1,7 +1,8 @@
 Rails.application.routes.draw do
 
   resources :convos
-
+  root 'convos#index'
+  post 'callback' => 'convos#callback'
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
