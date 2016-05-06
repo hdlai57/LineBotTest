@@ -1,5 +1,6 @@
 class ConvosController < ApplicationController
-
+  before_action :client
+  
   def index
     @convos = Convo.all
   end
