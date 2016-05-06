@@ -49,9 +49,9 @@ class ConvosController < ApplicationController
 # Line bot
   def client
     @client ||= Line::Bot::Client.new { |config|
-      config.channel_id = ENV["1466651784"]
-      config.channel_secret = ENV["7f17a78e95948a22dc93b3ce67c4e9cb"]
-      config.channel_mid = ENV["u8c29ad707a807c0ffa82ade5a670e110"]
+      config.channel_id = ENV["linebotc_id"]
+      config.channel_secret = ENV["linebotc_secret"]
+      config.channel_mid = ENV["linebotc_mid"]
     }
   end
 
