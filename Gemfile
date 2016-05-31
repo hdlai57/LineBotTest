@@ -4,6 +4,11 @@ gem 'pry'
 # gem "sinatra"
 # gem 'sinatra', '~>1.4.4'
 gem 'line-bot-api'
+# Zurb fundation for html framework
+# gem 'foundation-rails'
+
+# Use for evironment variables
+gem "figaro"
 
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'

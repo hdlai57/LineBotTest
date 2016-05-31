@@ -32,7 +32,7 @@ class ConvosController < ApplicationController
       when Line::Bot::Message::Text
         client.send_text(
           to_mid: message.from_mid,
-          text: message.content[:text] + "by Pu <3",
+          text: message.content[:text] + " --- by Pu <3 @ 531",
         )
       end
     }
@@ -50,9 +50,11 @@ class ConvosController < ApplicationController
 # Line bot
   def client
     @client ||= Line::Bot::Client.new { |config|
-      config.channel_id = ENV["linebotc_id"]
-      config.channel_secret = ENV["linebotc_secret"]
-      config.channel_mid = ENV["linebotc_mid"]
+      # binding.pry
+      config.channel_id = ENV["LINEPUBOT_ID"]
+      config.channel_secret = ENV["LINEPUBOT_SECRET"]
+      config.channel_mid = ENV["LINEPUBOT_MID"]
+
     }
   end
 
