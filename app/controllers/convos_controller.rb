@@ -36,8 +36,7 @@ class ConvosController < ApplicationController
         )
       end
     }
-
-    "OK"
+    head :ok    
   end
 
 
